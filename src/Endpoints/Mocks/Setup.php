@@ -1,9 +1,9 @@
 <?php
 
-namespace DataMat\VoPay\Endpoints\Mocks;
+namespace maher1337\VoPay\Endpoints\Mocks;
 
-use DataMat\VoPay\Interfaces\VoPayContractMockEndpoint;
-use DataMat\VoPay\Traits\MockEndpoint;
+use maher1337\VoPay\Interfaces\VoPayContractMockEndpoint;
+use maher1337\VoPay\Traits\MockEndpoint;
 
 /**
  * @method array setPlaidCredentials(array $payload)
@@ -17,7 +17,7 @@ class Setup implements VoPayContractMockEndpoint
     /**
      * @inheritDoc
      */
-    public function getMock() : array
+    public function getMock(): array
     {
         return [
             'set-plaid-credentials' => [

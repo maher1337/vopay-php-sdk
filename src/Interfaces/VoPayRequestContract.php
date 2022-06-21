@@ -1,16 +1,16 @@
 <?php
 
-namespace DataMat\VoPay\Interfaces;
+namespace maher1337\VoPay\Interfaces;
 
 interface VoPayRequestContract
 {
     /**
      * @return array
      */
-    public function getRequired() : array;
+    public function getRequired(): array;
 
     /**
      * @return array
      */
-    public function getPayload() : array;
+    public function getPayload(): array;
 }

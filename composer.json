@@ -1,20 +1,21 @@
 {
-    "name": "matteocacciola/vopay-php-sdk",
+    "name": "maher1337/vopay-php-sdk",
     "description": "VoPay PHP SDK",
     "keywords": ["vopay", "payment"],
     "type": "project",
     "license": "MIT",
     "require": {
-        "php": "^7.4",
-        "guzzlehttp/guzzle": "^7.0.1"
+        "php": "^7.4 | ^8.0",
+        "guzzlehttp/guzzle": "^7.4.4"
     },
     "require-dev": {
         "matteocacciola/cd-checker": "^1.1",
         "squizlabs/php_codesniffer": "^3.4"
     },
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "DataMat\\VoPay\\": "src"
+            "maher1337\\VoPay\\": "src"
         }
     }
 }

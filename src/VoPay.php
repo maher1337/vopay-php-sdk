@@ -1,27 +1,27 @@
 <?php
 
-namespace DataMat\VoPay;
+namespace maher1337\VoPay;
 
-use DataMat\VoPay\Exceptions\UndefinedCredentials;
-use DataMat\VoPay\Factories\VoPayFactory;
-use DataMat\VoPay\Interfaces\VoPayContractEndpoint;
-use DataMat\VoPay\Traits\Credentials;
-use DataMat\VoPay\Utilities\Utility;
+use maher1337\VoPay\Exceptions\UndefinedCredentials;
+use maher1337\VoPay\Factories\VoPayFactory;
+use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
+use maher1337\VoPay\Traits\Credentials;
+use maher1337\VoPay\Utilities\Utility;
 
 /**
- * @method \DataMat\VoPay\Endpoints\Account account()
- * @method \DataMat\VoPay\Endpoints\AccountOnboarding accountOnboarding()
- * @method \DataMat\VoPay\Endpoints\ClientAccount clientAccount()
- * @method \DataMat\VoPay\Endpoints\Document document()
- * @method \DataMat\VoPay\Endpoints\ElectronicFundsTransfer electronicFundsTransfer()
- * @method \DataMat\VoPay\Endpoints\GlobalCashManagement globalCashManagement()
- * @method \DataMat\VoPay\Endpoints\Interac interac()
- * @method \DataMat\VoPay\Endpoints\Iq11 iq11()
- * @method \DataMat\VoPay\Endpoints\Partner partner()
- * @method \DataMat\VoPay\Endpoints\PayLink payLink()
- * @method \DataMat\VoPay\Endpoints\Setup setup()
- * @method \DataMat\VoPay\Endpoints\SubAccount subAccount()
- * @method \DataMat\VoPay\Endpoints\VisaDirect visaDirect()
+ * @method \maher1337\VoPay\Endpoints\Account account()
+ * @method \maher1337\VoPay\Endpoints\AccountOnboarding accountOnboarding()
+ * @method \maher1337\VoPay\Endpoints\ClientAccount clientAccount()
+ * @method \maher1337\VoPay\Endpoints\Document document()
+ * @method \maher1337\VoPay\Endpoints\ElectronicFundsTransfer electronicFundsTransfer()
+ * @method \maher1337\VoPay\Endpoints\GlobalCashManagement globalCashManagement()
+ * @method \maher1337\VoPay\Endpoints\Interac interac()
+ * @method \maher1337\VoPay\Endpoints\Iq11 iq11()
+ * @method \maher1337\VoPay\Endpoints\Partner partner()
+ * @method \maher1337\VoPay\Endpoints\PayLink payLink()
+ * @method \maher1337\VoPay\Endpoints\Setup setup()
+ * @method \maher1337\VoPay\Endpoints\SubAccount subAccount()
+ * @method \maher1337\VoPay\Endpoints\VisaDirect visaDirect()
  */
 class VoPay
 {
@@ -51,7 +51,7 @@ class VoPay
      *
      * @return VoPayContractEndpoint
      */
-    public function __call(string $method, $args) : VoPayContractEndpoint
+    public function __call(string $method, $args): VoPayContractEndpoint
     {
         $objectEndpoint = VoPayFactory::build(
             __NAMESPACE__ . '\\Endpoints\\' . Utility::classize($method)

@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Utilities;
+namespace maher1337\VoPay\Utilities;
 
 class Utility
 {
@@ -9,7 +9,7 @@ class Utility
      *
      * @return string
      */
-    public static function endpointize(string $function) : string
+    public static function endpointize(string $function): string
     {
         $pieces = self::getPieces($function);
 
@@ -30,7 +30,7 @@ class Utility
      *
      * @return string
      */
-    public static function classize(string $function) : string
+    public static function classize(string $function): string
     {
         return ucfirst($function);
     }
@@ -51,7 +51,7 @@ class Utility
      *
      * @return string
      */
-    private static function implodeAndTrimPieces(array $pieces, string $glue) : string
+    private static function implodeAndTrimPieces(array $pieces, string $glue): string
     {
         return trim(implode($glue, $pieces));
     }

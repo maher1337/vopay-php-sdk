@@ -1,11 +1,11 @@
 <?php
 
-namespace DataMat\VoPay\Traits;
+namespace maher1337\VoPay\Traits;
 
-use DataMat\VoPay\Exceptions\InvalidEndpoint;
-use DataMat\VoPay\Interfaces\VoPayContractEndpoint;
-use DataMat\VoPay\Requests\VoPayRequest;
-use DataMat\VoPay\Utilities\Utility;
+use maher1337\VoPay\Exceptions\InvalidEndpoint;
+use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
+use maher1337\VoPay\Requests\VoPayRequest;
+use maher1337\VoPay\Utilities\Utility;
 
 trait Endpoint
 {
@@ -31,11 +31,11 @@ trait Endpoint
             'base_uri' => $this->baseUri
         ]);
     }
-    
+
     /**
      * @return void
      */
-    private function setBaseUri() : void
+    private function setBaseUri(): void
     {
         $env = getenv('APP_ENV');
         $isProduction = strpos($env, 'prod') !== false || strpos($env, 'live') !== false;
@@ -48,7 +48,7 @@ trait Endpoint
     /**
      * @inheritDoc
      */
-    public function setCredentials(string $accountId, string $apiKey, string $apiSecret) : VoPayContractEndpoint
+    public function setCredentials(string $accountId, string $apiKey, string $apiSecret): VoPayContractEndpoint
     {
         $this->accountId = $accountId;
         $this->apiKey = $apiKey;
@@ -63,10 +63,10 @@ trait Endpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \DataMat\VoPay\Exceptions\InvalidPayload
+     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    public function __call(string $function, $args) : array
+    public function __call(string $function, $args): array
     {
         $endpointKey = Utility::endpointize($function);
 
@@ -86,7 +86,7 @@ trait Endpoint
      * @return array
      * @throws InvalidEndpoint
      */
-    private function getEndpoint(string $key) : array
+    private function getEndpoint(string $key): array
     {
         if (!($endpoint = $this->endpoints[$key] ?? null)) {
             throw new InvalidEndpoint();
@@ -101,7 +101,7 @@ trait Endpoint
      *
      * @return string
      */
-    private function sanitizeUri(string $uri, array $replacements = []) : string
+    private function sanitizeUri(string $uri, array $replacements = []): string
     {
         $uri = $this->prefixUri . $uri;
 
@@ -118,13 +118,13 @@ trait Endpoint
      * @return array
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    private function response(VoPayRequest $request) : array
+    private function response(VoPayRequest $request): array
     {
         $payload = $request->getPayload() + [
-                'AccountID' => $this->accountId,
-                'Key' => $this->apiKey,
-                'Signature' => $this->calculateSignature()
-            ];
+            'AccountID' => $this->accountId,
+            'Key' => $this->apiKey,
+            'Signature' => $this->calculateSignature()
+        ];
 
         $method = $request->getMethod();
 
@@ -140,7 +140,7 @@ trait Endpoint
     /**
      * @return string
      */
-    private function calculateSignature() : string
+    private function calculateSignature(): string
     {
         $date = (new \DateTimeImmutable())->format('Y-m-d');
         return sha1($this->apiKey . $this->apiSecret . $date);
@@ -152,7 +152,7 @@ trait Endpoint
      *
      * @return array
      */
-    private function parsePayload(string $method, array $payload) : array
+    private function parsePayload(string $method, array $payload): array
     {
         switch (strtolower($method)) {
             case 'get':
@@ -177,10 +177,10 @@ trait Endpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \DataMat\VoPay\Exceptions\InvalidPayload
+     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
-    protected function singleCall(string $endpointKey, array $replacements, ?array $payload = []) : array
+    protected function singleCall(string $endpointKey, array $replacements, ?array $payload = []): array
     {
         $endpoint = $this->getEndpoint($endpointKey);
         $endpoint['uri'] = $this->sanitizeUri($endpoint['uri'], $replacements);

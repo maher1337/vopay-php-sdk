@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Requests;
+namespace maher1337\VoPay\Requests;
 
 abstract class AbstractRequest
 {
@@ -13,7 +13,7 @@ abstract class AbstractRequest
     /**
      * @inheritDoc
      */
-    public function getPayload() : array
+    public function getPayload(): array
     {
         return $this->payload ?? [];
     }
@@ -21,7 +21,7 @@ abstract class AbstractRequest
     /**
      * @inheritDoc
      */
-    public function getRequired() : array
+    public function getRequired(): array
     {
         return $this->required;
     }
@@ -29,14 +29,14 @@ abstract class AbstractRequest
     /**
      * @return bool
      */
-    protected function isValidPayload() : bool
+    protected function isValidPayload(): bool
     {
         $count = 0;
         foreach ($this->required as $key) {
             if ((isset($this->payload[$key]) || array_key_exists($key, $this->payload)) &&
                 !empty($this->payload[$key])
             ) {
-                $count ++;
+                $count++;
             }
         }
 

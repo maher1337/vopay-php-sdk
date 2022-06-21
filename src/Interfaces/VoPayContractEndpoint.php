@@ -1,18 +1,18 @@
 <?php
 
-namespace DataMat\VoPay\Interfaces;
+namespace maher1337\VoPay\Interfaces;
 
 interface VoPayContractEndpoint extends VoPayContract
 {
     /**
      * @return array
      */
-    public function getEndpoints() : array;
+    public function getEndpoints(): array;
 
     /**
      * @return $this
      */
-    public function setPrefixUri() : VoPayContractEndpoint;
+    public function setPrefixUri(): VoPayContractEndpoint;
 
     /**
      * @param string $accountId
@@ -21,5 +21,5 @@ interface VoPayContractEndpoint extends VoPayContract
      *
      * @return VoPayContractEndpoint
      */
-    public function setCredentials(string $accountId, string $apiKey, string $apiSecret) : VoPayContractEndpoint;
+    public function setCredentials(string $accountId, string $apiKey, string $apiSecret): VoPayContractEndpoint;
 }

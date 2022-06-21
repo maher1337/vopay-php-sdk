@@ -1,9 +1,9 @@
 <?php
 
-namespace DataMat\VoPay\Requests;
+namespace maher1337\VoPay\Requests;
 
-use DataMat\VoPay\Exceptions\InvalidPayload;
-use DataMat\VoPay\Interfaces\VoPayRequestContract;
+use maher1337\VoPay\Exceptions\InvalidPayload;
+use maher1337\VoPay\Interfaces\VoPayRequestContract;
 
 class VoPayRequestMock extends AbstractRequest implements VoPayRequestContract
 {
@@ -31,7 +31,7 @@ class VoPayRequestMock extends AbstractRequest implements VoPayRequestContract
     /**
      * @return array
      */
-    public function getResponse() : array
+    public function getResponse(): array
     {
         return $this->response;
     }

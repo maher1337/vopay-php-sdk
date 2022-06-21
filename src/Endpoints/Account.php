@@ -1,10 +1,10 @@
 <?php
 
-namespace DataMat\VoPay\Endpoints;
+namespace maher1337\VoPay\Endpoints;
 
-use DataMat\VoPay\Interfaces\VoPayContractEndpoint;
-use DataMat\VoPay\Traits\Credentials;
-use DataMat\VoPay\Traits\Endpoint;
+use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
+use maher1337\VoPay\Traits\Credentials;
+use maher1337\VoPay\Traits\Endpoint;
 
 /**
  * @method array balance(?array $payload = [])
@@ -30,7 +30,7 @@ class Account implements VoPayContractEndpoint
     /**
      * @return VoPayContractEndpoint
      */
-    public function setPrefixUri() : VoPayContractEndpoint
+    public function setPrefixUri(): VoPayContractEndpoint
     {
         $this->prefixUri = 'account';
 
@@ -40,7 +40,7 @@ class Account implements VoPayContractEndpoint
     /**
      * @inheritDoc
      */
-    public function getEndpoints() : array
+    public function getEndpoints(): array
     {
         return [
             'balance' => [

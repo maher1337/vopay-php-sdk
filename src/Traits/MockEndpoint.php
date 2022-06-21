@@ -1,10 +1,10 @@
 <?php
 
-namespace DataMat\VoPay\Traits;
+namespace maher1337\VoPay\Traits;
 
-use DataMat\VoPay\Exceptions\InvalidEndpoint;
-use DataMat\VoPay\Requests\VoPayRequestMock;
-use DataMat\VoPay\Utilities\Utility;
+use maher1337\VoPay\Exceptions\InvalidEndpoint;
+use maher1337\VoPay\Requests\VoPayRequestMock;
+use maher1337\VoPay\Utilities\Utility;
 
 trait MockEndpoint
 {
@@ -26,10 +26,10 @@ trait MockEndpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \DataMat\VoPay\Exceptions\InvalidPayload
+     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
      * @throws \Exception
      */
-    public function __call(string $function, $args) : array
+    public function __call(string $function, $args): array
     {
         $endpointKey = Utility::endpointize($function);
 
@@ -47,7 +47,7 @@ trait MockEndpoint
      * @return array
      * @throws InvalidEndpoint
      */
-    private function getEndpoint(string $key) : array
+    private function getEndpoint(string $key): array
     {
         if (!($endpoint = $this->endpoints[$key] ?? null)) {
             throw new InvalidEndpoint();
@@ -61,7 +61,7 @@ trait MockEndpoint
      *
      * @return array
      */
-    private function mock(VoPayRequestMock $requestMock) : array
+    private function mock(VoPayRequestMock $requestMock): array
     {
         return $requestMock->getResponse();
     }

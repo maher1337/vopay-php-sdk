@@ -1,8 +1,8 @@
 <?php
 
-namespace DataMat\VoPay\Factories;
+namespace maher1337\VoPay\Factories;
 
-use DataMat\VoPay\Interfaces\VoPayContractEndpoint;
+use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
 
 class VoPayFactory
 {
@@ -11,7 +11,7 @@ class VoPayFactory
      *
      * @return VoPayContractEndpoint
      */
-    public static function build(string $class) : VoPayContractEndpoint
+    public static function build(string $class): VoPayContractEndpoint
     {
         if (!class_exists($class)) {
             throw new \BadMethodCallException();

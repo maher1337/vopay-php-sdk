@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Traits;
+namespace maher1337\VoPay\Traits;
 
 trait Credentials
 {

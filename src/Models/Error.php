@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Models;
+namespace maher1337\VoPay\Models;
 
 class Error
 {
@@ -79,7 +79,7 @@ class Error
      *
      * @return array|string[]
      */
-    public function get(int $code) : array
+    public function get(int $code): array
     {
         return $this->errors[$code] ?? [];
     }
@@ -89,12 +89,12 @@ class Error
      *
      * @return string|null
      */
-    public function getReason(int $code) : ?string
+    public function getReason(int $code): ?string
     {
         return $this->errors[$code]['reason'] ?? null;
     }
 
-    public function getDescription(int $code) : ?string
+    public function getDescription(int $code): ?string
     {
         return $this->errors[$code]['description'] ?? null;
     }

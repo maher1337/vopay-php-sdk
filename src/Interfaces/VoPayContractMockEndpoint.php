@@ -1,11 +1,11 @@
 <?php
 
-namespace DataMat\VoPay\Interfaces;
+namespace maher1337\VoPay\Interfaces;
 
 interface VoPayContractMockEndpoint extends VoPayContract
 {
     /**
      * @return array
      */
-    public function getMock() : array;
+    public function getMock(): array;
 }

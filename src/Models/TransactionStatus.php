@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Models;
+namespace maher1337\VoPay\Models;
 
 class TransactionStatus
 {

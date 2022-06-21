@@ -1,6 +1,6 @@
 <?php
 
-namespace DataMat\VoPay\Exceptions;
+namespace maher1337\VoPay\Exceptions;
 
 class UndefinedCredentials extends \Exception
 {

@@ -1,9 +1,9 @@
 <?php
 
-namespace DataMat\VoPay\Requests;
+namespace maher1337\VoPay\Requests;
 
-use DataMat\VoPay\Exceptions\InvalidPayload;
-use DataMat\VoPay\Interfaces\VoPayRequestContract;
+use maher1337\VoPay\Exceptions\InvalidPayload;
+use maher1337\VoPay\Interfaces\VoPayRequestContract;
 
 class VoPayRequest extends AbstractRequest implements VoPayRequestContract
 {
@@ -35,7 +35,7 @@ class VoPayRequest extends AbstractRequest implements VoPayRequestContract
     /**
      * @return string|null
      */
-    public function getUri() : ?string
+    public function getUri(): ?string
     {
         return $this->uri;
     }
@@ -43,7 +43,7 @@ class VoPayRequest extends AbstractRequest implements VoPayRequestContract
     /**
      * @return string|null
      */
-    public function getMethod() : ?string
+    public function getMethod(): ?string
     {
         return $this->method;
     }
