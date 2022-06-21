@@ -1,10 +1,10 @@
 <?php
 
-namespace maher1337\VoPay\Traits;
+namespace PaymentProcessor\VoPay\Traits;
 
-use maher1337\VoPay\Exceptions\InvalidEndpoint;
-use maher1337\VoPay\Requests\VoPayRequestMock;
-use maher1337\VoPay\Utilities\Utility;
+use PaymentProcessor\VoPay\Exceptions\InvalidEndpoint;
+use PaymentProcessor\VoPay\Requests\VoPayRequestMock;
+use PaymentProcessor\VoPay\Utilities\Utility;
 
 trait MockEndpoint
 {
@@ -26,7 +26,7 @@ trait MockEndpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
+     * @throws \PaymentProcessor\VoPay\Exceptions\InvalidPayload
      * @throws \Exception
      */
     public function __call(string $function, $args): array

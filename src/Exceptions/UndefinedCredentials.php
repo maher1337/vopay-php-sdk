@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Exceptions;
+namespace PaymentProcessor\VoPay\Exceptions;
 
 class UndefinedCredentials extends \Exception
 {

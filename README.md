@@ -26,7 +26,7 @@ Or add to the ```require``` section of your ```composer.json``` file:
 ## Basic usage
 
 ```php
-use maher1337\VoPay\VoPay;
+use PaymentProcessor\VoPay\VoPay;
 
 $client = new VoPay('account_id', 'api-key', 'api_secret');
 ```
@@ -67,13 +67,13 @@ protected function buildVopayEndpointGroup(string $endpoint) : VoPayContract
 }
 ```
 
-returning the subset of endpoints, like `account` or `electronicFundsTransfer` etc. Loosely speaking, the `$endpoint` is one of the name of the methods provided by `maher1337\VoPay\VoPay` client.
+returning the subset of endpoints, like `account` or `electronicFundsTransfer` etc. Loosely speaking, the `$endpoint` is one of the name of the methods provided by `PaymentProcessor\VoPay\VoPay` client.
 
 Then, here is what you could mock in a test:
 
 ```php
 use Mockery\MockInterface;
-use maher1337\VoPay\Endpoints\Mocks\ElectronicFundsTransfer;
+use PaymentProcessor\VoPay\Endpoints\Mocks\ElectronicFundsTransfer;
 
 // $shouldTestSucceed is a boolean: true if the mocked response from the VoPay API should succeed, false otherwise
 $this->partialMock(SomeClass::class, function (MockInterface $mock) use ($shouldTestSucceed) {

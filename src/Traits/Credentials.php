@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Traits;
+namespace PaymentProcessor\VoPay\Traits;
 
 trait Credentials
 {

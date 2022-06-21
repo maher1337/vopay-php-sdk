@@ -1,9 +1,9 @@
 <?php
 
-namespace maher1337\VoPay\Endpoints\Mocks;
+namespace PaymentProcessor\VoPay\Endpoints\Mocks;
 
-use maher1337\VoPay\Interfaces\VoPayContractMockEndpoint;
-use maher1337\VoPay\Traits\MockEndpoint;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractMockEndpoint;
+use PaymentProcessor\VoPay\Traits\MockEndpoint;
 
 /**
  * @method array balance(?array $payload = [])

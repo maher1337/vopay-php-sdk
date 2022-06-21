@@ -1,10 +1,10 @@
 <?php
 
-namespace maher1337\VoPay\Endpoints;
+namespace PaymentProcessor\VoPay\Endpoints;
 
-use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
-use maher1337\VoPay\Traits\Credentials;
-use maher1337\VoPay\Traits\Endpoint;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractEndpoint;
+use PaymentProcessor\VoPay\Traits\Credentials;
+use PaymentProcessor\VoPay\Traits\Endpoint;
 
 /**
  * @method array postSubaccount(array $payload)
@@ -95,8 +95,8 @@ class SubAccount implements VoPayContractEndpoint
      * @param string|null $shareolderId
      *
      * @return array
-     * @throws \maher1337\VoPay\Exceptions\InvalidEndpoint
-     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
+     * @throws \PaymentProcessor\VoPay\Exceptions\InvalidEndpoint
+     * @throws \PaymentProcessor\VoPay\Exceptions\InvalidPayload
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function postSubaccountShareholderInfo(array $payload, ?string $shareolderId = ''): array

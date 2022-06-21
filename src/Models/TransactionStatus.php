@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Models;
+namespace PaymentProcessor\VoPay\Models;
 
 class TransactionStatus
 {

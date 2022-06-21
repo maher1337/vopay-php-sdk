@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Interfaces;
+namespace PaymentProcessor\VoPay\Interfaces;
 
 interface VoPayRequestContract
 {

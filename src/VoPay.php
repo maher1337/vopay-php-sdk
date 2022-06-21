@@ -1,27 +1,27 @@
 <?php
 
-namespace maher1337\VoPay;
+namespace PaymentProcessor\VoPay;
 
-use maher1337\VoPay\Exceptions\UndefinedCredentials;
-use maher1337\VoPay\Factories\VoPayFactory;
-use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
-use maher1337\VoPay\Traits\Credentials;
-use maher1337\VoPay\Utilities\Utility;
+use PaymentProcessor\VoPay\Exceptions\UndefinedCredentials;
+use PaymentProcessor\VoPay\Factories\VoPayFactory;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractEndpoint;
+use PaymentProcessor\VoPay\Traits\Credentials;
+use PaymentProcessor\VoPay\Utilities\Utility;
 
 /**
- * @method \maher1337\VoPay\Endpoints\Account account()
- * @method \maher1337\VoPay\Endpoints\AccountOnboarding accountOnboarding()
- * @method \maher1337\VoPay\Endpoints\ClientAccount clientAccount()
- * @method \maher1337\VoPay\Endpoints\Document document()
- * @method \maher1337\VoPay\Endpoints\ElectronicFundsTransfer electronicFundsTransfer()
- * @method \maher1337\VoPay\Endpoints\GlobalCashManagement globalCashManagement()
- * @method \maher1337\VoPay\Endpoints\Interac interac()
- * @method \maher1337\VoPay\Endpoints\Iq11 iq11()
- * @method \maher1337\VoPay\Endpoints\Partner partner()
- * @method \maher1337\VoPay\Endpoints\PayLink payLink()
- * @method \maher1337\VoPay\Endpoints\Setup setup()
- * @method \maher1337\VoPay\Endpoints\SubAccount subAccount()
- * @method \maher1337\VoPay\Endpoints\VisaDirect visaDirect()
+ * @method \PaymentProcessor\VoPay\Endpoints\Account account()
+ * @method \PaymentProcessor\VoPay\Endpoints\AccountOnboarding accountOnboarding()
+ * @method \PaymentProcessor\VoPay\Endpoints\ClientAccount clientAccount()
+ * @method \PaymentProcessor\VoPay\Endpoints\Document document()
+ * @method \PaymentProcessor\VoPay\Endpoints\ElectronicFundsTransfer electronicFundsTransfer()
+ * @method \PaymentProcessor\VoPay\Endpoints\GlobalCashManagement globalCashManagement()
+ * @method \PaymentProcessor\VoPay\Endpoints\Interac interac()
+ * @method \PaymentProcessor\VoPay\Endpoints\Iq11 iq11()
+ * @method \PaymentProcessor\VoPay\Endpoints\Partner partner()
+ * @method \PaymentProcessor\VoPay\Endpoints\PayLink payLink()
+ * @method \PaymentProcessor\VoPay\Endpoints\Setup setup()
+ * @method \PaymentProcessor\VoPay\Endpoints\SubAccount subAccount()
+ * @method \PaymentProcessor\VoPay\Endpoints\VisaDirect visaDirect()
  */
 class VoPay
 {

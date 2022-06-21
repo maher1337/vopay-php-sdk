@@ -1,8 +1,8 @@
 <?php
 
-namespace maher1337\VoPay\Factories;
+namespace PaymentProcessor\VoPay\Factories;
 
-use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractEndpoint;
 
 class VoPayFactory
 {

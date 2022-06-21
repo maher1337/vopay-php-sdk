@@ -1,10 +1,10 @@
 <?php
 
-namespace maher1337\VoPay\Endpoints;
+namespace PaymentProcessor\VoPay\Endpoints;
 
-use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
-use maher1337\VoPay\Traits\Credentials;
-use maher1337\VoPay\Traits\Endpoint;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractEndpoint;
+use PaymentProcessor\VoPay\Traits\Credentials;
+use PaymentProcessor\VoPay\Traits\Endpoint;
 
 /**
  * @method array currencies(?array $payload = [])

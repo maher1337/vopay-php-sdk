@@ -1,11 +1,11 @@
 <?php
 
-namespace maher1337\VoPay\Traits;
+namespace PaymentProcessor\VoPay\Traits;
 
-use maher1337\VoPay\Exceptions\InvalidEndpoint;
-use maher1337\VoPay\Interfaces\VoPayContractEndpoint;
-use maher1337\VoPay\Requests\VoPayRequest;
-use maher1337\VoPay\Utilities\Utility;
+use PaymentProcessor\VoPay\Exceptions\InvalidEndpoint;
+use PaymentProcessor\VoPay\Interfaces\VoPayContractEndpoint;
+use PaymentProcessor\VoPay\Requests\VoPayRequest;
+use PaymentProcessor\VoPay\Utilities\Utility;
 
 trait Endpoint
 {
@@ -63,7 +63,7 @@ trait Endpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
+     * @throws \PaymentProcessor\VoPay\Exceptions\InvalidPayload
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     public function __call(string $function, $args): array
@@ -177,7 +177,7 @@ trait Endpoint
      *
      * @return array
      * @throws InvalidEndpoint
-     * @throws \maher1337\VoPay\Exceptions\InvalidPayload
+     * @throws \PaymentProcessor\VoPay\Exceptions\InvalidPayload
      * @throws \GuzzleHttp\Exception\GuzzleException
      */
     protected function singleCall(string $endpointKey, array $replacements, ?array $payload = []): array

@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Utilities;
+namespace PaymentProcessor\VoPay\Utilities;
 
 class Utility
 {

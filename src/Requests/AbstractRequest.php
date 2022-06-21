@@ -1,6 +1,6 @@
 <?php
 
-namespace maher1337\VoPay\Requests;
+namespace PaymentProcessor\VoPay\Requests;
 
 abstract class AbstractRequest
 {

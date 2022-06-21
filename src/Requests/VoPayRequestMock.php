@@ -1,9 +1,9 @@
 <?php
 
-namespace maher1337\VoPay\Requests;
+namespace PaymentProcessor\VoPay\Requests;
 
-use maher1337\VoPay\Exceptions\InvalidPayload;
-use maher1337\VoPay\Interfaces\VoPayRequestContract;
+use PaymentProcessor\VoPay\Exceptions\InvalidPayload;
+use PaymentProcessor\VoPay\Interfaces\VoPayRequestContract;
 
 class VoPayRequestMock extends AbstractRequest implements VoPayRequestContract
 {
